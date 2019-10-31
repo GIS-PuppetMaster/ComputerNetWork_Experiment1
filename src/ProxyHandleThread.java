@@ -8,7 +8,7 @@ public class ProxyHandleThread extends Thread {
      */
     private InputStream inputStream;
     private OutputStream outputStream;
-    private byte[] buffer = new byte[4096];
+    private byte[] buffer = new byte[2*Config.INPUT_BUFFER_SIZE];
     public ProxyHandleThread(InputStream inputStream, OutputStream outputStream) {
         this.inputStream = inputStream;
         this.outputStream = outputStream;
